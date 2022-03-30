@@ -6,7 +6,7 @@ app.set("port", 3000);
 
 const server = http.createServer(app); */
 
-const express = require('express');
+/* const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
@@ -19,4 +19,13 @@ app.get('/health', (req, res) => {
 
 app.listen(8080, () => {
     console.log("Server up and running")
-})
+}) */
+
+const mongoose = require('mongoose');
+mongoose.connect("mongodb://127.0.0.1:27017/quizzapp", (error) => {
+    if (error){
+        console.log("failure");
+    } else {
+        console.log("success")
+    }
+});

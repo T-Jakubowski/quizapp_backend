@@ -4,12 +4,15 @@
   "description": "API QuizzApp",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.17.3"
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9",
+    "mongose": "^0.0.2-security",
+    "nodemon": "^2.0.15"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC"
