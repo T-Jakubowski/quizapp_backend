@@ -3,6 +3,7 @@ import express from "express";
 import path from "path";
 import bodyparser from "body-parser";
 import UserController from "./controllers/users.mjs";
+import RoleController from "./controllers/roles.mjs";
 
 connection();
 
@@ -17,6 +18,8 @@ app.get('/', (req, res) => {
 })
 
 app.use("/users", UserController);
+
+app.use("/roles", RoleController);
 
 app.listen("3000", () => {
     console.log('listening on http://localhost:3000');
