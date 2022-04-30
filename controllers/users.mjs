@@ -12,14 +12,13 @@ router.get("/readall", (req, res) => {
   UserSchema.find((err, docs) => {
     if (!err) {
       res.send(docs);
-    }
-    else {
+    } else {
       console.log("failed");
     }
   });
 });
 
-//récupère un user spécifuque grace a son prenom
+//récupère un user spécifique grace a son id
 router.get("/read/:id", async (req, res) => {
   try {
     const id = req.params.id;
@@ -62,7 +61,14 @@ router.patch("/update/:id", async (req, res) => {
     const id = req.params.id;
     const updated = await UserSchema.updateOne(
       { _id: id },
-      { $set: { lastName: req.body.lastName } }
+      {
+        $set: {
+          lastName: req.body.lastName,
+          firstName: req.body.firstName,
+          login: req.body.login,
+          password: req.body.password,
+        },
+      }
     );
     res.json(updated);
   } catch (err) {
