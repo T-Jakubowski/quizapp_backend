@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "package.json",
   "version": "1.0.0",
   "description": "API QuizzApp",
@@ -12,8 +13,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.mjs"
   },
+  
   "author": "",
   "license": "ISC"
 }
