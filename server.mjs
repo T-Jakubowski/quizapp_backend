@@ -5,6 +5,7 @@ import bodyparser from "body-parser";
 import UserController from "./controllers/users.mjs";
 import RoleController from "./controllers/roles.mjs";
 import QuizController from "./controllers/quiz.mjs";
+import QuestionController from "./controllers/questions.mjs";
 
 connection();
 
@@ -23,6 +24,8 @@ app.use("/users", UserController);
 app.use("/roles", RoleController);
 
 app.use("/quiz", QuizController);
+
+app.use("/questions", QuestionController);
 
 app.listen("3000", () => {
     console.log('listening on http://localhost:3000');
