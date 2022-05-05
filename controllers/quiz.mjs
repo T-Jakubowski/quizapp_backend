@@ -13,7 +13,7 @@ router.get("/readall", (req, res) => {
     if (!err) {
       res.send(docs);
     } else {
-      console.log("failed");
+      console.log("failede");
     }
   });
 });
