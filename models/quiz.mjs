@@ -9,5 +9,5 @@ export const QuizModel = () => {
       type: "string",
     },
   });
-  mongoose.model("quiz", QuizSchema);
+  mongoose.model("quizzes", QuizSchema);
 };

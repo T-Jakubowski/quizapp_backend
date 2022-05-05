@@ -5,7 +5,7 @@ import { QuizModel } from "../models/quiz.mjs";
 QuizModel();
 
 const router = express.Router();
-const QuizSchema = mongoose.model("quiz");
+const QuizSchema = mongoose.model("quizzes");
 
 //récupère tous les quiz
 router.get("/readall", (req, res) => {
